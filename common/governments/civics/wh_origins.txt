@@ -1,0 +1,31 @@
+origin_tyranid_hive = {
+	is_origin = yes # makes sure it is actually an origin
+	icon = "gfx/interface/icons/origins/origins_life_seeded.dds" # gives an icon to the origin
+	picture = GFX_origin_life_seeded # gives a picture for the origin selection screen
+	
+	starting_colony = pc_hive # sets the starting planet to hive world
+	habitability_preference = pc_hive # gives the tyranid hive preference
+	preferred_planet_class_neighbor = no # the guaranteed habitable worlds will not be guaranteed to match the empire's climate preference.
+
+	possible = { # has to meet these conditions to be playable
+		authority = {
+			value = auth_hive_mind # have to be a hive_mind
+		}
+		civics = {
+			value = civic_hive_devouring_swarm # has to have devouring swarm civic
+			NOT = {
+				text = civic_tooltip_not_idyllic_bloom # cannot have idyllic bloom civic
+				value = civic_hive_idyllic_bloom
+			}
+		}
+	}
+
+	description = "origin_tyranid_hive" # localization key that describes the origin
+	ai_playable = {
+		always = no # Non_ai origin
+	}
+	
+	traits = {
+		trait = trait_wh_tyranid
+	}
+}
