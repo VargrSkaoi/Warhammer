@@ -1,0 +1,68 @@
+tyranid_incubation = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_society_research_produces_mult = 0.05
+	planet_jobs_food_produces_mult = 0.05
+	
+    planet_immigration_pull_mult = 0.05
+    
+    pop_growth_speed = 0.05
+    planet_pop_assembly_organic_mult = 0.05
+    
+    planet_stability_add = 5
+    planet_amenities_add = 10
+}
+
+tyranid_infected = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_society_research_produces_mult = 0.10
+	planet_jobs_food_produces_mult = 0.10
+	
+    planet_immigration_pull_mult = 0.10
+    
+    pop_growth_speed = 0.10
+    planet_pop_assembly_organic_mult = 0.10
+    
+    planet_stability_add = 10
+    planet_amenities_add = 20
+}
+
+tyranid_infested = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_society_research_produces_mult = 0.15
+	planet_jobs_food_produces_mult = 0.15
+	
+    planet_immigration_pull_mult = 0.15
+    
+    pop_growth_speed = 0.15
+    planet_pop_assembly_organic_mult = 0.15
+    
+    planet_stability_add = 15
+    planet_amenities_add = 30
+}
+
+tyranid_hive = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_society_research_produces_mult = 0.30
+	planet_jobs_food_produces_mult = 0.30
+
+	planet_immigration_pull_mult = 0.30
+
+    pop_growth_speed = 0.30
+    planet_pop_assembly_organic_mult = 0.30
+
+    planet_stability_add = 30
+    planet_amenities_add = 60
+}
+
+remove_tyranid_hive = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 3
+}

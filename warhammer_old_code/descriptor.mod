@@ -1,0 +1,11 @@
+version="0.0.1"
+tags={
+	"Events"
+	"Buildings"
+	"Leaders"
+	"Gameplay"
+	"Species"
+	"Spaceships"
+}
+name="Warhammer"
+supported_version="3.11.*"

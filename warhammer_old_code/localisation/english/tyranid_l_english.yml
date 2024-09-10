@@ -1,0 +1,51 @@
+﻿# sets the localisaztion files language to english
+l_english: 
+#######################
+# Tyranid Hive Origin #
+#######################
+origin_tyranid_hive:0 "Tyranid Hive"
+origin_tyranid_hive_desc:0 "The Tyranids, the great devourer. There has never been a race that has threatened the galaxy more. They are the bane of all other life. They are guided by a single unknowable conciousness with its only desire being to consume."
+
+# Infesting Hive Modifiers
+tyranid_incubation:0 "Incubating Hive"
+tyranid_incubation_desc:0 "The incubation process has started to infect this planet."
+tyranid_infected:0 "Infecting World"
+tyranid_infected_desc:0 "The planet has successfully been incubated and has started to infect this world."
+tyranid_infested:0 "Infesting World"
+tyranid_infested_desc:0 "This hive has gone from a simple infection on the world to a full on infestation. The transformation is almost completed."
+tyranid_hive:0 "Hive Completed"
+tyranid_hive_desc:0 "This world has been fully infested and now our hive will thrive."
+
+# Infected World
+pc_tyranid_infected_adj:0 "hive"
+pc_tyranid_infected:0 "Infected World"
+pc_tyranid_infected_desc:0 "This world is the result of the incubation of our hive coming to fruition. The planet is starting to go through the process of turning all of its biomass into organic structures for the hive to inhabit"
+pc_tyranid_infected_tile:0 "Infected World Terrain"
+pc_tyranid_tile_desc:0 "The biomass of the hive is progressively taking control of the planet"
+trait_pc_tyranid_infected_preference:0 "Infected Hive Preference"
+trait_pc_tyranid_infected_preference_desc:0 "§LClimate preference is determined by eons of evolution, design, or skillful genetic manipulation.§!"
+mod_pc_tyranid_infected_habitability:0 "Infected Hive Habitability"
+
+# Infested World
+pc_tyranid_infested_adj:0 "hive"
+pc_tyranid_infested:0 "Infested World"
+pc_tyranid_infested_desc:0 "This world has progressed from a simple infection to a full blown infestion of the planet. The planet that was once timing with a variety of live now is a part of the hive serving its glorious and unified purposes."
+pc_tyranid_infested_tile:0 "Infested Hive Terrain"
+pc_tyranid_infested_tile_desc:0 "The hive has almost completly taken oven the planet. The forests, mountains, oceans, and deserts have all been subsumed into the hive to provide housing for the drones of the evergrowing hive."
+trait_pc_tyranid_infested_preference:0 "Infested Hive Preference"
+trait_pc_tyranid_infested_preference_desc:0 "$trait_pc_tyranid_infected_preference_desc$"
+mod_pc_tyranid_infested_habitability:0 "Infested Hive Habitability"
+
+# Modified Hive World
+pc_tyranid_hive_adj:0 "hive"
+pc_tyranid_hive:0 "Hive World"
+pc_tyranid_hive_desc:0 "The infestation of this world has been finally completed and there is no sign of life except the growing hive. All life that was on the planet has become a part of the hive. The planet has now become sentient and will continue to grow without the help of the hive, but now it has developed a craving for species of the unviverse, and the hive shall provide."
+pc_tyranid_hive_tile:0 "Hive Terrain"
+pc_tyranid_hive_tile_desc:0 "The hive's biomass has taken over the planet. What was once a beautiful and thriving ecosystem is now one with the hive. Everything in sight is the hive and its structures to house its workers."
+trait_pc_tyranid_hive_preference:0 "Hive World Preference"
+trait_pc_tyranid_hive_preference_desc:0 "$trait_pc_tyranid_infected_preference_desc$"
+mod_pc_tyranid_hive_habitability:0 "Hive World Habitability"
+
+# Hive Removal
+remove_tyranid_hive:0 "The Hive is being destroyed"
+remove_tyranid_hive_desc:0 "The connection to the hive has been destroyed, and without it the hive is dying"

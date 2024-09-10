@@ -1,0 +1,20 @@
+origin_tyranid_hive = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_here_be_dragons.dds"
+	picture = GFX_origin_progenitor_hive
+
+	description = "origin_tooltip_tyranid_hive_effects"
+
+	starting_colony = pc_tyranid_hive
+	habitability_preference = pc_tyranid_hive
+	preferred_planet_class_neighbor = no
+
+	possible = {
+		authority = {
+			value = auth_hive_mind
+		}
+		civics = {
+			value = civic_hive_devouring_swarm
+		}
+	}
+}
