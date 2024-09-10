@@ -1,0 +1,45 @@
+﻿l_english:
+
+# Tyranid Localization
+
+## Traits
+trait_wh_tyranid:0 "Tyranid"
+trait_wh_tyranid_desc:0 "The Tyranids, also known as The Great Devourer are an extragalactic alien race, whose sole purpose is the consumption of all forms of genetic and biological material in order to evolve and reproduce."
+trait_pc_wh_tyranid_hive_preference:0 "Tyranid Hive Preference"
+trait_pc_wh_tyranid_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
+
+## Origin
+origin_tyranid_hive:0 "Tyranid Hive"
+origin_tyranid_hive_desc:0 "The Tyranid Origin represents a hive-minded empire driven by the relentless desire to consume and assimilate all life. Starting with a homeworld infested with Tyranid organisms, you expand by sending hive fleets to convert planets into new hive nodes. Your gameplay focuses on harvesting biomass, evolving rapidly to adapt to new environments, and facing resistance from other empires. Your empire grows through a unique infestation and assimilation mechanic, reflecting the all-consuming nature of the Tyranids."
+
+## Hive Worlds
+
+### Infected World
+pc_wh_infected_hive:0 "Infected World"
+pc_wh_infected_hive_desc:0 "An Infected World is a planet overrun by a parasitic or viral force that corrupts and transforms its environment, lifeforms, and ecosystems. The infection spreads rapidly, mutating native species into aggressive, hostile creatures while warping the landscape into grotesque, organic forms. Toxic air, contaminated water, and pulsating growths cover the surface, making survival nearly impossible. The infection often displays intelligence, acting with a hive mind to expand and consume everything, posing a severe threat to nearby worlds due to its potential for uncontrollable spread across the galaxy."
+pc_wh_infected_hive_adj:0 "hive"
+pc_wh_infected_hive_tile:0 "Infected Hive Terrain"
+pc_wh_infected_hive_tile_desc:0 "The terrain of an Infected World is a twisted, corrupted version of its natural landscape. Once familiar environments are now covered in fleshy tendrils, mutated vegetation, and parasitic growths. The ground may pulse with organic material, and towering fungal structures or grotesque hives dominate the skyline. Pools of toxic sludge replace lakes and rivers, while the air is thick with spores or biohazardous mist. The terrain is hostile and constantly shifting, as the infection spreads across the planet, consuming and mutating everything in its path."
+trait_pc_wh_infected_hive_preference:0 "Infected Hive Preference"
+trait_pc_wh_infected_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
+mod_pc_wh_infected_hive_habitability:0 "Infected Hive Habitability"
+
+### Infested World
+pc_wh_infested_hive:0 "Infested World"
+pc_wh_infested_hive_desc:0 "An Infested World is a planet overrun by invasive, parasitic creatures that have completely taken over its environment. The landscape is twisted and corrupted, with alien hives, fleshy tendrils, and mutated wildlife dominating the surface. The infestation spreads uncontrollably, consuming resources and warping ecosystems into breeding grounds for hostile life forms. Once-thriving civilizations or ecosystems are reduced to decaying remnants, with the planet now serving as a hub for further infestation and expansion."
+pc_wh_infested_hive_adj:0 "hive"
+pc_wh_infested_hive_tile:0 "Infested Hive Terrain"
+pc_wh_infested_hive_tile_desc:0 "Infested terrain is a twisted, corrupted landscape overtaken by alien growths and parasitic lifeforms. Organic tendrils, hive structures, and fungal growths cover the ground, replacing natural features like forests and rivers with grotesque, pulsating biomass. The environment is hostile and toxic, with mutated wildlife and aggressive creatures roaming the infested zones. Previously recognizable terrain is now unrecognizable, consumed by the infestation that spreads across the planet, turning it into a breeding ground for invasive species."
+trait_pc_wh_infested_hive_preference:0 "Infested Hive Preference"
+trait_pc_wh_infested_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
+mod_pc_wh_infested_hive_habitability:0 "Infested Hive Habitability"
+
+### Incubating World
+pc_wh_incubating_hive:0 "Incubating World"
+pc_wh_incubating_hive_desc:0 "An Incubating World is a planet in the early stages of infestation or infection, where parasitic or alien lifeforms are quietly growing and spreading beneath the surface. The planet may still appear normal on the outside, with its ecosystems and inhabitants largely intact, but hidden within its core or isolated regions, the infestation is slowly incubating. This world serves as a breeding ground, where invasive entities mature and prepare for a larger takeover, waiting for the right moment to fully emerge and overwhelm the planet. The signs of corruption are subtle but growing."
+pc_wh_incubating_hive_adj:0 "hive"
+pc_wh_incubating_hive_tile:0 "Incubating Hive Terrain"
+pc_wh_incubating_hive_tile_desc:0 "Incubating terrain appears mostly normal at first glance, with natural landscapes largely intact, but beneath the surface, parasitic growths and alien infestations are slowly spreading. Hidden pockets of infection, like underground hives, corrupted caves, or strange organic growths, hint at the looming danger. Subtle changes—discolored vegetation, unnatural formations, or strange atmospheric shifts—reveal the planet is in the early stages of transformation. Though outwardly stable, the terrain is quietly being prepared as a breeding ground for a future infestation."
+trait_pc_wh_incubating_hive_preference:0 "Incubating Hive Preference"
+trait_pc_wh_incubating_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
+mod_pc_wh_incubating_hive_habitability:0 "Incubating Hive Habitability"
