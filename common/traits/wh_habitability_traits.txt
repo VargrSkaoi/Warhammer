@@ -1,0 +1,26 @@
+@primary = 1.0
+@secondary = 0.9
+@tertiary = 0.8
+@quaternary 0.7
+
+trait_pc_tyranid_hive_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_hive_preference.dds" # adds icon to trait
+	species_potential_add = { # how the trait to add to species when genemodding or randomizing traits.
+		always = no
+	}
+	species_possible_merge_add = { #  Governs if the trait can be added when applying a template to an existing species with genemodding.
+		always = yes
+	}
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID } # Determines if the trait is valid for the given archetypes.
+	sorting_priority = 30
+	modifier = { # what planet habitability is modified by this trait
+		pc_hive_habitability = @primary
+		pc_wh_swarm_hive_habitability = @secondary
+		pc_wh_infested_hive_habitability = @tertiary
+		pc_wh_incubating_hive_habitability = @quaternary
+		pop_environment_tolerance = 0.5 # minimum habitability for this species on any planet
+	}
+	ai_weight = { # if the ai can use this trait
+		weight = 0
+	}
+}
