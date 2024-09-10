@@ -1,0 +1,4 @@
+NGameplay = {
+	DEFAULT_TRAIT_OPTIONS_ON_LEVEL_UP		= 10	# Default number of selectable non-upgrade trait options before modifiers available on level up
+	NUM_DESTINY_TRAIT_OPTIONS				= 10	# Default number of destiny traits to select from
+}

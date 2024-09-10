@@ -1,0 +1,4 @@
+﻿l_english:
+
+building_planet_grower:0 "Planet Grower"
+building_planet_grower_desc:0 "This building will slowly incresase a planet up to a maximum size of 30.  The time it takes to increment is 30 days times the current planet size.  Once the planet has been increase to size 30 and the terraformed flag times out, the building will automatically be removed.\n\n"
