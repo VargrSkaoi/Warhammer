@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-nothing for now!
+### Fixed
+
+- updated changelog to properly compare releases
 
 ## [0.0.1] - 2024-09-09
 
@@ -17,5 +19,5 @@ nothing for now!
 - a basic README
 - a basic CHANGELOG
 
-[Unreleased]: 
-[0.0.1]: 
+[Unreleased]: https://github.com/VargrSkaoi/Warhammer/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/VargrSkaoi/Warhammer/releases/tag/v0.0.1
