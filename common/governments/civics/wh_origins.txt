@@ -4,7 +4,7 @@ origin_tyranid_hive = {
 	picture = GFX_origin_life_seeded # gives a picture for the origin selection screen
 	
 	starting_colony = pc_hive # sets the starting planet to hive world
-	habitability_preference = pc_hive # gives the tyranid hive preference
+	habitability_preference = pc_wh_tyranid_hive # gives the tyranid hive preference
 	preferred_planet_class_neighbor = no # the guaranteed habitable worlds will not be guaranteed to match the empire's climate preference.
 
 	possible = { # has to meet these conditions to be playable

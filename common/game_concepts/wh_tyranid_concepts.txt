@@ -1,0 +1,11 @@
+concept_pc_hive_world = {
+	icon = "gfx/interface/icons/concepts/planet_classes/pc_hive.dds"
+}
+
+concept_tyranid_hive_preference = {
+
+}
+
+concept_trait_wh_tyranid = {
+	
+}
