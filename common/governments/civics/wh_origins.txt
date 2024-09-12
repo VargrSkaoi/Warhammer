@@ -20,7 +20,7 @@ origin_tyranid_hive = {
 		}
 	}
 
-	description = "origin_tyranid_hive_desc" # localization key that describes the origin
+	description = "origin_tyranid_hive_effects" # localization key that describes the origin
 	ai_playable = {
 		always = no # Non_ai origin
 	}
