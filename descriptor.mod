@@ -1,4 +1,4 @@
-version="0.0.1"
+version="0.3.1"
 tags={
 	"Species"
 	"Buildings"
@@ -6,4 +6,4 @@ tags={
 	"Gameplay"
 }
 name="Warhammer"
-supported_version="v3.12.5"
+supported_version="v3.13.*"
