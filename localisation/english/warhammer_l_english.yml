@@ -11,37 +11,33 @@ trait_pc_wh_tyranid_hive_preference_desc:0 "Climate preference is determined at 
 ## Origin
 origin_tyranid_hive:0 "Tyranid Hive"
 origin_tyranid_hive_desc:0 "The Tyranid Origin represents a hive-minded empire driven by the relentless desire to consume and assimilate all life. Starting with a homeworld infested with Tyranid organisms, you expand by sending hive fleets to convert planets into new hive nodes. Your gameplay focuses on harvesting biomass, evolving rapidly to adapt to new environments, and facing resistance from other empires. Your empire grows through a unique infestation and assimilation mechanic, reflecting the all-consuming nature of the Tyranids."
-origin_tyranid_hive_effects:0 "- $HOMEWORLD$$TABBED_NEW_LINE$- ['concept_pc_hive_world', $pc_hive$]$NEW_LINE$- $SPECIES_TRAITS$$TABBED_NEW_LINE$- ['concept_tyranid_hive_preference', $trait_pc_wh_tyranid_hive_preference$]$TABBED_NEW_LINE$- ['concept_trait_wh_tyranid', $trait_wh_tyranid$]"
+origin_tyranid_hive_effects:0 "- $HOMEWORLD$$TABBED_NEW_LINE$- ['concept_pc_hive_world', $pc_hive$]$NEW_LINE$- $SPECIES_TRAITS$$TABBED_NEW_LINE$- ['concept_tyranid_hive_preference', $trait_pc_wh_tyranid_hive_preference$]$TABBED_NEW_LINE$- ['concept_trait_wh_tyranid', $trait_wh_tyranid$] \n\n§RWARNING: All planet classes are slowly ['concept_transformation', tranformed ] to§! ['concept_pc_wh_tyranid_hive', $pc_wh_tyranid_hive$]"
 
 ### Concepts
-concept_pc_hive_world:0 "$pc_hive$"
-concept_pc_hive_world_desc:0 "- Base Habitability: §Y0%§!\n- $mod_planet_jobs_produces_mult$: §G+10%§!\n- $MOD_PLANET_MAX_BUILDINGS_ADD$: §G+12§!\n- $mod_job_spawning_drone_add$: §G+1§!\n- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+50%§!\n\n§L$pc_hive_desc$§!"
-concept_tyranid_hive_preference:0 "$trait_pc_wh_tyranid_hive_preference$"
-concept_tyranid_hive_preference_desc:0 "- Hive Habitability: §G+100%§!$NEW_LINE$- Tyranid Hive Habitability: §G+100%§!$NEW_LINE$- Infected Hive Habitability: §G+90%§!$NEW_LINE$- Infested Hive Habitability: §G+80%§!$NEW_LINE$- Incubating Hive Habitability: §G+70%§!\n\n§L$trait_pc_wh_tyranid_hive_preference_desc$§!"
+concept_pc_hive_world: "$pc_hive$"
+concept_pc_hive_world_desc: "- Base Habitability: §Y0%§!$NEW_LINE$- $mod_planet_jobs_produces_mult$: §G+10%§!$NEW_LINE$- $MOD_PLANET_MAX_BUILDINGS_ADD$: §G+12§!$NEW_LINE$- $mod_job_spawning_drone_add$: §G+1§!$NEW_LINE$- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+50%§!\n\n§L$pc_hive_desc$§!"
+concept_tyranid_hive_preference: "$trait_pc_wh_tyranid_hive_preference$"
+concept_tyranid_hive_preference_desc: "- Hive Habitability: §G+100%§!$NEW_LINE$- Tyranid Hive Habitability: §G+100%§!$NEW_LINE$- Infected Hive Habitability: §G+90%§!$NEW_LINE$- Infested Hive Habitability: §G+80%§!$NEW_LINE$- Incubating Hive Habitability: §G+70%§!\n\n§L$trait_pc_wh_tyranid_hive_preference_desc$§!"
 concept_trait_wh_tyranid:0 "$trait_wh_tyranid$"
-concept_trait_wh_tyranid_desc:0 "- $MOD_POP_GROWTH_SPEED$: §R+25%§! $NEW_LINE$- $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$: §R+25%§! $NEW_LINE$- $MOD_HABITABILITY_FLOOR_ADD$: §R+50%§! $NEW_LINE$- $MOD_ARMY_HEALTH$: §R+50%§! $NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §R+50%§!\n\n§L$trait_wh_tyranid_desc$§!"
+concept_trait_wh_tyranid_desc: "- $MOD_POP_GROWTH_SPEED$: §R+25%§! $NEW_LINE$- $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$: §R+25%§! $NEW_LINE$- $MOD_ARMY_HEALTH$: §R+50%§! $NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §R+50%§!\n\n§L$trait_wh_tyranid_desc$§!"
+concept_transformation: "Tyranid Planet Transformation Stages"
+concept_transformation_desc: "- ['concept_stage_1', Stage 1: The Seed] $NEW_LINE$- ['concept_stage_2', Stage 2: Incubation] $NEW_LINE$- ['concept_stage_3', Stage 3: Infection] $NEW_LINE$- ['concept_stage_4', Stage 4: Infestation] $NEW_LINE$- ['concept_stage_5', Stage 5: Completion]"
 
 ## Hive Worlds
 
 ### Tyranid Hive World
 pc_wh_tyranid_hive:0 "Tyranid Hive World"
-pc_wh_tyranid_hive_desc:0 ""
+pc_wh_tyranid_hive_desc:0 "A Tyranid Hive World is a planet consumed and reshaped by the Tyranids, leaving behind a barren, lifeless landscape. All organic matter is devoured to fuel the swarm, while the surface is covered in grotesque bioorganic structures like spawning pools, digestion pits, and spore towers. The planet becomes a living factory, churning out endless Tyranid creatures, serving as a staging ground for their relentless expansion across the galaxy."
 pc_wh_tyranid_hive_adj:0 "hive"
 pc_wh_tyranid_hive_tile:0 "Tyranid Hive Terrain"
-pc_wh_tyranid_hive_tile_desc:0 ""
+pc_wh_tyranid_hive_tile_desc:0 "The terrain of a Tyranid Hive World is an alien, bioorganic wasteland. Once-natural landscapes are replaced with grotesque Tyranid structures like spore chimneys, capillary towers, and digestion pools. The ground is often covered in fleshy, pulsing biomass, with tendrils and creeper vines spreading across the surface. Rivers of toxic sludge flow through the landscape, and the air is thick with spores and bio-contaminants. Any remnants of the planet's original environment are long gone, consumed by the Tyranid swarm to fuel their relentless growth."
 trait_pc_wh_tyranid_hive_preference:0 "Tyranid Hive Preference"
 trait_pc_wh_tyranid_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
 mod_pc_wh_tyranid_hive_habitability:0 "Tyranid Hive Habitability"
 
-### Infected World
-pc_wh_infected_hive:0 "Infected World"
-pc_wh_infected_hive_desc:0 "An Infected World is a planet overrun by a parasitic or viral force that corrupts and transforms its environment, lifeforms, and ecosystems. The infection spreads rapidly, mutating native species into aggressive, hostile creatures while warping the landscape into grotesque, organic forms. Toxic air, contaminated water, and pulsating growths cover the surface, making survival nearly impossible. The infection often displays intelligence, acting with a hive mind to expand and consume everything, posing a severe threat to nearby worlds due to its potential for uncontrollable spread across the galaxy."
-pc_wh_infected_hive_adj:0 "hive"
-pc_wh_infected_hive_tile:0 "Infected Hive Terrain"
-pc_wh_infected_hive_tile_desc:0 "The terrain of an Infected World is a twisted, corrupted version of its natural landscape. Once familiar environments are now covered in fleshy tendrils, mutated vegetation, and parasitic growths. The ground may pulse with organic material, and towering fungal structures or grotesque hives dominate the skyline. Pools of toxic sludge replace lakes and rivers, while the air is thick with spores or biohazardous mist. The terrain is hostile and constantly shifting, as the infection spreads across the planet, consuming and mutating everything in its path."
-trait_pc_wh_infected_hive_preference:0 "Infected Hive Preference"
-trait_pc_wh_infected_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
-mod_pc_wh_infected_hive_habitability:0 "Infected Hive Habitability"
+#### Concepts
+concept_pc_wh_tyranid_hive: "$pc_wh_tyranid_hive$"
+concept_pc_wh_tyranid_hive_desc: "- Base Habitability: §Y0%§!$NEW_LINE$- $mod_planet_jobs_produces_mult$: §G+10%§!$NEW_LINE$- $MOD_PLANET_MAX_BUILDINGS_ADD$: §G+12§!$NEW_LINE$- $mod_job_spawning_drone_add$: §G+4§!$NEW_LINE$- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+50%§!\n\n§L$pc_wh_tyranid_hive_desc$§!"
 
 ### Infested World
 pc_wh_infested_hive:0 "Infested World"
@@ -52,6 +48,16 @@ pc_wh_infested_hive_tile_desc:0 "Infested terrain is a twisted, corrupted landsc
 trait_pc_wh_infested_hive_preference:0 "Infested Hive Preference"
 trait_pc_wh_infested_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
 mod_pc_wh_infested_hive_habitability:0 "Infested Hive Habitability"
+
+### Infected World
+pc_wh_infected_hive:0 "Infected World"
+pc_wh_infected_hive_desc:0 "An Infected World is a planet overrun by a parasitic or viral force that corrupts and transforms its environment, lifeforms, and ecosystems. The infection spreads rapidly, mutating native species into aggressive, hostile creatures while warping the landscape into grotesque, organic forms. Toxic air, contaminated water, and pulsating growths cover the surface, making survival nearly impossible. The infection often displays intelligence, acting with a hive mind to expand and consume everything, posing a severe threat to nearby worlds due to its potential for uncontrollable spread across the galaxy."
+pc_wh_infected_hive_adj:0 "hive"
+pc_wh_infected_hive_tile:0 "Infected Hive Terrain"
+pc_wh_infected_hive_tile_desc:0 "The terrain of an Infected World is a twisted, corrupted version of its natural landscape. Once familiar environments are now covered in fleshy tendrils, mutated vegetation, and parasitic growths. The ground may pulse with organic material, and towering fungal structures or grotesque hives dominate the skyline. Pools of toxic sludge replace lakes and rivers, while the air is thick with spores or biohazardous mist. The terrain is hostile and constantly shifting, as the infection spreads across the planet, consuming and mutating everything in its path."
+trait_pc_wh_infected_hive_preference:0 "Infected Hive Preference"
+trait_pc_wh_infected_hive_preference_desc:0 "Climate preference is determined at the genetic level, by eons of evolution or skillful manipulation."
+mod_pc_wh_infected_hive_habitability:0 "Infected Hive Habitability"
 
 ### Incubating World
 pc_wh_incubating_hive:0 "Incubating World"

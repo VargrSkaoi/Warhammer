@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- nothing for now
+### Added
+
+- gitignore file
+
+### Changed
+
+- Switched the Infect and Infest modifier for everything
+- descriptor.mod file to better reflect changes
+- Tyranid origin icon
 
 ## [0.3.1]
 
