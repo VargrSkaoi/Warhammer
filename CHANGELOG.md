@@ -10,10 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - gitignore file
+- tyranid static modifiers
+- localization for tyranid hive world
+- event for tyranid capital creation
+- started concepts for transformation localization
+- on_action file
 
 ### Changed
 
-- Switched the Infect and Infest modifier for everything
+- Switched the Infect and Infest descriptor for everything
 - descriptor.mod file to better reflect changes
 - Tyranid origin icon
 
