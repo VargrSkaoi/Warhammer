@@ -21,7 +21,7 @@ concept_tyranid_hive_preference_desc: "- Hive Habitability: §G+100%§!$NEW_LINE
 concept_trait_wh_tyranid:0 "$trait_wh_tyranid$"
 concept_trait_wh_tyranid_desc: "- $MOD_POP_GROWTH_SPEED$: §R+25%§! $NEW_LINE$- $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$: §R+25%§! $NEW_LINE$- $MOD_ARMY_HEALTH$: §R+50%§! $NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §R+50%§!\n\n§L$trait_wh_tyranid_desc$§!"
 concept_transformation: "Tyranid Planet Transformation Stages"
-concept_transformation_desc: "- ['concept_stage_1', Stage 1: The Seed] $NEW_LINE$- ['concept_stage_2', Stage 2: Incubation] $NEW_LINE$- ['concept_stage_3', Stage 3: Infection] $NEW_LINE$- ['concept_stage_4', Stage 4: Infestation] $NEW_LINE$- ['concept_stage_5', Stage 5: Completion]"
+concept_transformation_desc: "- ['concept_stage_1', Stage 1: The Embryo] $NEW_LINE$- ['concept_stage_2', Stage 2: Incubation] $NEW_LINE$- ['concept_stage_3', Stage 3: Infection] $NEW_LINE$- ['concept_stage_4', Stage 4: Infestation] $NEW_LINE$- ['concept_stage_5', Stage 5: Completion]"
 
 ## Hive Worlds
 

@@ -1,7 +1,7 @@
 origin_tyranid_hive = {
 	is_origin = yes # makes sure it is actually an origin
 	icon = "gfx/interface/icons/origins/origin_here_be_dragons.dds" # gives an icon to the origin
-	picture = GFX_origin_life_seeded # gives a picture for the origin selection screen
+	picture = GFX_origin_progenitor_hive # gives a picture for the origin selection screen
 	
 	starting_colony = pc_hive # sets the starting planet to hive world
 	habitability_preference = pc_wh_tyranid_hive # gives the tyranid hive preference

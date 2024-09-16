@@ -1,0 +1,57 @@
+namespace = tyranid
+
+@incubationTime = 360
+@infectingTime = 720
+@infestingTime = 1440
+
+planet_event = {
+	id = tyranid.0
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+	}
+
+	immediate = {
+		clear_blockers = yes
+		clear_deposits = yes
+		
+		while = {
+			limit = {
+				has_district = district_generator
+			}
+			remove_district = district_generator
+			add_district = district_generator_uncapped
+		}
+
+		while = {
+			limit = {
+				has_district = district_mining
+			}
+			remove_district = district_mining
+			add_district = district_mining_uncapped
+		}
+
+		while = {
+			limit = {
+				has_district = district_farming
+			}
+			remove_district = district_farming
+			add_district = district_farming_uncapped
+		}
+
+		set_planet_size = 30
+
+		add_modifier = {
+			modifier = tyranid_hive_home
+		}
+	}
+}
