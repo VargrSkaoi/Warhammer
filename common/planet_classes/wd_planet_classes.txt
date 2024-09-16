@@ -76,7 +76,7 @@ pc_wh_infested_hive = {
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 
 	colonizable = yes
-	district_set = standard
+	district_set = hive_world
 	starting_planet = no
 	show_city = no
 
@@ -117,7 +117,7 @@ pc_wh_infected_hive = {
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 
 	colonizable = yes
-	district_set = hive_world
+	district_set = standard
 	starting_planet = no
 	show_city = no
 
