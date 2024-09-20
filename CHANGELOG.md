@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - localization for tyranid hive world
 - event for tyranid capital creation
 - started concepts for transformation localization
-- on_action file
+- on_actions file
+- Tyranid planet conversion events
 
 ### Changed
 
