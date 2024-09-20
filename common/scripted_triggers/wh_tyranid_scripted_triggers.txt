@@ -1,0 +1,18 @@
+has_tyranid_hive_flag = {
+	OR = {
+		has_planet_flag = tyranid_hive
+		has_planet_flag = tyranid_infested
+		has_planet_flag = tyranid_infected
+		has_planet_flag = tyranid_incubation
+		has_planet_flag = tyranid_embryo
+	}
+}
+
+is_tyranid_hive = {
+	OR = {
+		is_planet_class = pc_wh_tyranid_hive
+		is_planet_class = pc_wh_infested_hive
+		is_planet_class = pc_wh_infected_hive
+		is_planet_class = pc_wh_incubating_hive
+	}
+}

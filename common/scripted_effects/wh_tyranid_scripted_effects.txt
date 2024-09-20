@@ -1,0 +1,34 @@
+generate_tyranid_home_world = {
+	clear_blockers = yes
+	clear_deposits = yes
+	
+	while = {
+		limit = {
+			has_district = district_generator
+		}
+		remove_district = district_generator
+		add_district = district_generator_uncapped
+	}
+
+	while = {
+		limit = {
+			has_district = district_mining
+		}
+		remove_district = district_mining
+		add_district = district_mining_uncapped
+	}
+
+	while = {
+		limit = {
+			has_district = district_farming
+		}
+		remove_district = district_farming
+		add_district = district_farming_uncapped
+	}
+
+	set_planet_size = 30
+
+	add_modifier = {
+		modifier = tyranid_hive_home
+	}
+}
