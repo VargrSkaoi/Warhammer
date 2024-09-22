@@ -2,7 +2,7 @@ namespace = tyranid
 
 @infestingTime = 1440
 @infectingTime = 720
-@infectingTime = 720
+@incubationTime = 360
 @embryoTime = 320
 
 planet_event = {
@@ -161,8 +161,8 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_origin = origin_tyranid_hive
-			has_planet_flag = tyranid_embryo
 		}
+		has_planet_flag = tyranid_embryo
 	}
 
 	immediate = {
@@ -243,8 +243,8 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_origin = origin_tyranid_hive
-			has_planet_flag = tyranid_incubation
 		}
+		has_planet_flag = tyranid_incubation
 	}
 
 	immediate = {
@@ -273,8 +273,8 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_origin = origin_tyranid_hive
-			has_planet_flag = tyranid_infected
 		}
+		has_planet_flag = tyranid_infected
 	}
 
 	immediate = {
@@ -303,8 +303,8 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_origin = origin_tyranid_hive
-			has_planet_flag = tyranid_infested
 		}
+		has_planet_flag = tyranid_infested
 	}
 
 	immediate = {

@@ -3,3 +3,15 @@ empire_init_capital_planet = {
 		tyranid.0
 	}
 }
+
+on_colonization_finished = {
+	events = {
+		tyranid.1
+	}
+}
+
+# on_planet_transfer = {
+# 	events = {
+# 		tyranid.1
+# 	}
+# }
