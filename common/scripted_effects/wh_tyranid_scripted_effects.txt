@@ -32,3 +32,87 @@ generate_tyranid_home_world = {
 		modifier = tyranid_hive_home
 	}
 }
+
+check_planet_modifiers = {
+	IF = {
+		limit = {
+			has_planet_modifier = pm_tidal_locked
+		}
+		set_planet_flag = mod_tidal_locked	
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_weak_magnetic_field
+		}
+		set_planet_flag = mod_weak_magnetic_field
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_dangerous_wildlife
+		}
+		set_planet_flag = mod_dangerous_wildlife
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_high_gravity
+		}
+		set_planet_flag = mod_high_gravity
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_wild_storms
+		}
+		set_planet_flag = mod_wild_storms
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+	}
+}
+
+remove_planet_modifiers = {
+	remove_modifier = "tidal_locked"
+	remove_modifier = "weak_magnetic_field"
+	remove_modifier = "dangerous_wildlife"
+	remove_modifier = "high_gravity"
+	remove_modifier = "low_gravity"
+	remove_modifier = "wild_storms"
+	remove_modifier = "low_gravity"
+	remove_modifier = "low_gravity"
+	remove_modifier = "low_gravity"
+	remove_modifier = "low_gravity"
+}
+
+check_planet_deposits = {
+
+}
+
+remove_planet_deposits = {
+
+}

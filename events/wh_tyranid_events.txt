@@ -32,13 +32,15 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		owner = {
-			has_origin = origin_tyranid_hive
-		}
-		NOT = {
-			OR = {
-				has_tyranid_hive_flag = yes
-				is_artificial = yes
+		AND = {
+			owner = {
+				has_origin = origin_tyranid_hive
+			}
+			NOT = {
+				OR = {
+					has_tyranid_hive_flag = yes
+					is_artificial = yes
+				}
 			}
 		}
 	}
@@ -186,6 +188,9 @@ planet_event = {
 		# Special Planets
 		IF = { limit = { is_planet_class = pc_nuked} set_planet_flag = tyranid_hive_nuked }
 		IF = { limit = { is_planet_class = pc_gaia} set_planet_flag = tyranid_hive_gaia }
+
+		check_planet_modifiers = yes
+		check_planet_deposits = yes
 		
 		every_deposit = {
 			limit = {
@@ -317,5 +322,35 @@ planet_event = {
 			modifier = tyranid_hive
 			days = -1
 		}
+	}
+}
+
+planet_event = {
+	id = tyranid.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+	}
+
+	immediate = {
+		remove_planet_flag = tyranid_embryo
+		remove_planet_flag = tyranid_incubation
+		remove_planet_flag = tyranid_infected
+		remove_planet_flag = tyranid_infested
+		remove_planet_flag = tyranid_hive
+
+		remove_modifier = tyranid_embryo
+		remove_modifier = tyranid_incubation
+		remove_modifier = tyranid_infected
+		remove_modifier = tyranid_infested
+		remove_modifier = tyranid_hive
+
+		set_planet_flag = tyranid_remove_hive
+
+		
 	}
 }
