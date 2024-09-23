@@ -191,6 +191,8 @@ planet_event = {
 
 		check_planet_modifiers = yes
 		check_planet_deposits = yes
+		remove_planet_modifier = yes
+		remove_planet_deposits = yes
 		
 		every_deposit = {
 			limit = {
