@@ -21,3 +21,25 @@ concept_transformation = {
 concept_pc_wh_tyranid_hive = {
 	icon = "gfx/interface/icons/concepts/planet_classes/pc_hive.dds"
 }
+
+## For transformation progression of tyranid hives
+
+concept_hive_stage_1 = {
+
+}
+
+concept_hive_stage_2 = {
+	
+}
+
+concept_hive_stage_3 = {
+	
+}
+
+concept_hive_stage_4 = {
+	
+}
+
+concept_hive_stage_5 = {
+	
+}
