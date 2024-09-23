@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - started concepts for transformation localization
 - on_actions file
 - Tyranid planet conversion events
+- transformation concept placeholders
 
 ### Changed
 
