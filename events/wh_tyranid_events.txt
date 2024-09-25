@@ -74,7 +74,6 @@ planet_event = {
 			set_planet_flag = tyranid_incubation
 			remove_planet_flag = tyranid_embryo
 			remove_planet_flag = remove_tyranid_hive
-			remove_planet_flag = restart_tyranid_hive
 
 			remove_modifier = remove_tyranid_hive
 			remove_modifier = land_appropriation
@@ -97,7 +96,6 @@ planet_event = {
 			set_planet_flag = tyranid_infected
 			remove_planet_flag = tyranid_incubation
 			remove_planet_flag = remove_tyranid_hive
-			remove_planet_flag = restart_tyranid_hive
 
 			remove_modifier = remove_tyranid_hive
 			remove_modifier = land_appropriation
@@ -120,7 +118,6 @@ planet_event = {
 			set_planet_flag = tyranid_infested
 			remove_planet_flag = tyranid_infected
 			remove_planet_flag = remove_tyranid_hive
-			remove_planet_flag = restart_tyranid_hive
 
 			remove_modifier = remove_tyranid_hive
 			remove_modifier = land_appropriation
@@ -143,7 +140,6 @@ planet_event = {
 			set_planet_flag = tyranid_hive
 			remove_planet_flag = tyranid_infested
 			remove_planet_flag = remove_tyranid_hive
-			remove_planet_flag = restart_tyranid_hive
 
 			remove_modifier = remove_tyranid_hive
 			remove_modifier = land_appropriation
@@ -189,10 +185,8 @@ planet_event = {
 		IF = { limit = { is_planet_class = pc_nuked} set_planet_flag = tyranid_hive_nuked }
 		IF = { limit = { is_planet_class = pc_gaia} set_planet_flag = tyranid_hive_gaia }
 
-		check_planet_modifiers = yes
-		check_planet_deposits = yes
-		remove_planet_modifier = yes
-		remove_planet_deposits = yes
+		track_planet_modifiers = yes
+		track_planet_deposits = yes
 		
 		every_deposit = {
 			limit = {
