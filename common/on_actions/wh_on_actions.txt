@@ -10,3 +10,9 @@ on_colonized = {
 	}
 }
 
+on_planet_transfer = {
+	events = {
+		tyranid.6
+		tyranid.7
+	}
+}
