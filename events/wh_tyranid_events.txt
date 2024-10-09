@@ -189,28 +189,6 @@ planet_event = {
 		IF = { limit = { is_planet_class = pc_nuked} set_planet_flag = tyranid_hive_nuked }
 		IF = { limit = { is_planet_class = pc_gaia} set_planet_flag = tyranid_hive_gaia }
 
-		track_planet_modifiers = yes
-		track_planet_deposits = yes
-		
-		every_deposit = {
-			limit = {
-				NOT = {
-					OR = {
-						is_deposit_type = d_dust_caverns
-						is_deposit_type = d_dust_desert
-						is_deposit_type = d_bubbling_swamp
-						is_deposit_type = d_fuming_bog
-						is_deposit_type = d_crystalline_caverns
-						is_deposit_type = d_crystal_forest
-						is_deposit_type = d_crystal_reef
-						is_deposit_type = d_betharian_deposit
-						is_deposit_type = d_progenitor
-					}
-				}
-			}
-			remove_deposit = yes
-		}
-
 		remove_modifier = "natural_beauty"
 		remove_modifier = "atmospheric_aphrodisiac"
 		remove_modifier = "atmospheric_hallucinogen"
@@ -286,6 +264,25 @@ planet_event = {
 
 	immediate = {
 		change_pc = pc_wh_infested_hive
+
+		every_deposit = {
+			limit = {
+				NOT = {
+					OR = {
+						is_deposit_type = d_dust_caverns
+						is_deposit_type = d_dust_desert
+						is_deposit_type = d_bubbling_swamp
+						is_deposit_type = d_fuming_bog
+						is_deposit_type = d_crystalline_caverns
+						is_deposit_type = d_crystal_forest
+						is_deposit_type = d_crystal_reef
+						is_deposit_type = d_betharian_deposit
+						is_deposit_type = d_progenitor
+					}
+				}
+			}
+			remove_deposit = yes
+		}
 
 		set_planet_flag = tyranid_infested
 		remove_planet_flag = tyranid_infected
@@ -482,31 +479,94 @@ planet_event = {
 	}
 }
 
-planet_event = {
-	id = tyranid.8
-	hide_window = yes
-	is_triggered_only = yes
+# planet_event = {
+# 	id = tyranid.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		has_planet_flag = remove_tyranid_hive
-	}
+# 	trigger = {
+# 		owner = {
+# 			NOT = { has_origin = origin_tyranid_hive }
+# 		}
+# 		has_planet_flag = remove_tyranid_hive
+# 	}
 
-	immediate = {
-		IF = {
-			limit = { is_planet_class = pc_wh_tyranid_hive }
-			change_pc = pc_wh_infested_hive
-		}
-		ELSE_IF = {
-			limit = { is_planet_class = pc_wh_infested_hive }
-			change_pc = pc_wh_infected_hive
-		}
-		ELSE_IF = {
-			limit = { is_planet_class = pc_wh_infected_hive }
-			change_pc = pc_wh_incubating_hive
-		}
-		ELSE_IF = {
-			limit = { is_planet_class = pc_wh_incubating_hive }
+# 	immediate = {
+# 		IF = {
+# 			limit = { is_planet_class = pc_wh_tyranid_hive }
+
+# 			planet_event = {
+# 				id = tyranid.9
+# 				days = @infestingTime
+# 			}
+# 		}
+# 		ELSE_IF = {
+# 			limit = { is_planet_class = pc_wh_infested_hive }
+
+# 			planet_event = {
+# 				id = tyranid.10
+# 				days = @infectingTime
+# 			}
+# 		}
+# 		ELSE_IF = {
+# 			limit = { is_planet_class = pc_wh_infected_hive }
+
+# 			planet_event = {
+# 				id = tyranid.11
+# 				days = @incubationTime
+# 			}
+# 		}
+# 		ELSE_IF = {
+# 			limit = { is_planet_class = pc_wh_incubating_hive }
+
+# 			planet_event = {
+# 				id = tyranid.12
+# 				days = @embryoTime
+# 			}
 			
-		}
-	}
-}
+# 		}
+# 	}
+# }
+
+# planet_event = {
+# 	id = tyranid.9
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		owner = {
+# 			NOT = { has_origin = origin_tyranid_hive }
+# 		}
+# 		has_planet_flag = remove_tyranid_hive
+# 	}
+
+# 	immediate = {
+# 		change_pc = pc_wh_infested_hive
+
+# 		reroll_deposits = yes
+# 		reroll_modifier = yes
+
+# 		while = {
+# 			limit = {
+# 				has_district = district_generator_uncapped
+# 			}
+# 			remove_district = district_generator_uncapped
+# 		}
+	
+# 		while = {
+# 			limit = {
+# 				has_district = district_mining_uncapped
+# 			}
+# 			remove_district = district_mining_uncapped
+# 		}
+	
+# 		while = {
+# 			limit = {
+# 				has_district = district_farming_uncapped
+# 			}
+# 			remove_district = district_farming_uncapped
+# 		}
+
+
+# 	}
+# }

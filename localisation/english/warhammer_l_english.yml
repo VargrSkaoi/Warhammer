@@ -33,6 +33,20 @@ concept_hive_stage_4_desc: ""
 concept_hive_stage_5: ""
 concept_hive_stage_5_desc: ""
 
+## Hive World Modifiers
+tyranid_hive_home:0 "Tyranid Home World"
+tyranid_hive_home_desc:0 "Tyranid Home World"
+tyranid_hive:0 
+tyranid_hive_desc:0 
+tyranid_infested:0 
+tyranid_infested_desc:0 
+tyranid_infected:0 
+tyranid_infected_desc:0 
+tyranid_embryo:0 
+tyranid_embryo_desc:0 
+remove_tyranid_hive:0 
+remove_tyranid_hive_desc:0 
+
 ## Hive Worlds
 
 ### Tyranid Hive World
