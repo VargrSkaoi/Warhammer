@@ -389,7 +389,7 @@ planet_event = {
 		if = {
 			limit = {
 				FROM = { has_origin = origin_tyranid_hive }
-				is_under_colonization = no
+				is_colony = yes
 				NOT = {
 					OR = {
 						has_planet_flag = tyranid_embryo
@@ -479,5 +479,34 @@ planet_event = {
 
 		remove_planet_flag = remove_tyranid_hive
 		remove_planet_flag = restart_tyranid_hive
+	}
+}
+
+planet_event = {
+	id = tyranid.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = remove_tyranid_hive
+	}
+
+	immediate = {
+		IF = {
+			limit = { is_planet_class = pc_wh_tyranid_hive }
+			change_pc = pc_wh_infested_hive
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infested_hive }
+			change_pc = pc_wh_infected_hive
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infected_hive }
+			change_pc = pc_wh_incubating_hive
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_incubating_hive }
+			
+		}
 	}
 }
