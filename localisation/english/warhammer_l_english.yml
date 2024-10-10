@@ -22,30 +22,32 @@ concept_trait_wh_tyranid:0 "$trait_wh_tyranid$"
 concept_trait_wh_tyranid_desc: "- $MOD_POP_GROWTH_SPEED$: §R+25%§! $NEW_LINE$- $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$: §R+25%§! $NEW_LINE$- $MOD_ARMY_HEALTH$: §R+50%§! $NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §R+50%§!\n\n§L$trait_wh_tyranid_desc$§!"
 concept_transformation: "Tyranid Planet Transformation Stages"
 concept_transformation_desc: "- ['concept_hive_stage_1', Stage 1: The Embryo] $NEW_LINE$- ['concept_hive_stage_2', Stage 2: Incubation] $NEW_LINE$- ['concept_hive_stage_3', Stage 3: Infection] $NEW_LINE$- ['concept_hive_stage_4', Stage 4: Infestation] $NEW_LINE$- ['concept_hive_stage_5', Stage 5: Completion]"
-concept_hive_stage_1: ""
+concept_hive_stage_1: "The Embryo"
 concept_hive_stage_1_desc: ""
-concept_hive_stage_2: ""
+concept_hive_stage_2: "Incubation"
 concept_hive_stage_2_desc: ""
-concept_hive_stage_3: ""
+concept_hive_stage_3: "Infection"
 concept_hive_stage_3_desc: ""
-concept_hive_stage_4: ""
+concept_hive_stage_4: "Infestation"
 concept_hive_stage_4_desc: ""
-concept_hive_stage_5: ""
+concept_hive_stage_5: "Hive Completed"
 concept_hive_stage_5_desc: ""
 
 ## Hive World Modifiers
 tyranid_hive_home:0 "Tyranid Home World"
 tyranid_hive_home_desc:0 "Tyranid Home World"
-tyranid_hive:0 
-tyranid_hive_desc:0 
-tyranid_infested:0 
-tyranid_infested_desc:0 
-tyranid_infected:0 
-tyranid_infected_desc:0 
-tyranid_embryo:0 
-tyranid_embryo_desc:0 
-remove_tyranid_hive:0 
-remove_tyranid_hive_desc:0 
+tyranid_hive:0 "Tyranid Hive"
+tyranid_hive_desc:0 "The planet has been fully converted to a fully formed hive"
+tyranid_infested:0 "Infesting World"
+tyranid_infested_desc:0 "This hive has gone from a simple infection on the world to a full on infestation. The transformation is almost completed."
+tyranid_infected:0 "Infecting World"
+tyranid_infected_desc:0 "The planet has successfully been incubated and has started to infect this world."
+tyranid_incubation:0 "Incubating Hive"
+tyranid_incubation_desc:0 "The incubation process has started to infect this planet."
+tyranid_embryo:0 "Embryo Planted"
+tyranid_embryo_desc:0 "An Tyranid embryo has been planted unto this world. It will soon consume this world."
+remove_tyranid_hive:0 "Removing Tyranid Hive"
+remove_tyranid_hive_desc:0 "Removing the Tyranid hive from this world to cleanse it of its flith."
 
 ## Hive Worlds
 
