@@ -479,94 +479,94 @@ planet_event = {
 	}
 }
 
-# planet_event = {
-# 	id = tyranid.8
-# 	hide_window = yes
-# 	is_triggered_only = yes
+planet_event = {
+	id = tyranid.8
+	hide_window = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 		owner = {
-# 			NOT = { has_origin = origin_tyranid_hive }
-# 		}
-# 		has_planet_flag = remove_tyranid_hive
-# 	}
+	trigger = {
+		owner = {
+			NOT = { has_origin = origin_tyranid_hive }
+		}
+		has_planet_flag = remove_tyranid_hive
+	}
 
-# 	immediate = {
-# 		IF = {
-# 			limit = { is_planet_class = pc_wh_tyranid_hive }
+	immediate = {
+		IF = {
+			limit = { is_planet_class = pc_wh_tyranid_hive }
 
-# 			planet_event = {
-# 				id = tyranid.9
-# 				days = @infestingTime
-# 			}
-# 		}
-# 		ELSE_IF = {
-# 			limit = { is_planet_class = pc_wh_infested_hive }
+			planet_event = {
+				id = tyranid.9
+				days = @infestingTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infested_hive }
 
-# 			planet_event = {
-# 				id = tyranid.10
-# 				days = @infectingTime
-# 			}
-# 		}
-# 		ELSE_IF = {
-# 			limit = { is_planet_class = pc_wh_infected_hive }
+			planet_event = {
+				id = tyranid.10
+				days = @infectingTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infected_hive }
 
-# 			planet_event = {
-# 				id = tyranid.11
-# 				days = @incubationTime
-# 			}
-# 		}
-# 		ELSE_IF = {
-# 			limit = { is_planet_class = pc_wh_incubating_hive }
+			planet_event = {
+				id = tyranid.11
+				days = @incubationTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_incubating_hive }
 
-# 			planet_event = {
-# 				id = tyranid.12
-# 				days = @embryoTime
-# 			}
+			planet_event = {
+				id = tyranid.12
+				days = @embryoTime
+			}
 			
-# 		}
-# 	}
-# }
+		}
+	}
+}
 
-# planet_event = {
-# 	id = tyranid.9
-# 	hide_window = yes
-# 	is_triggered_only = yes
+planet_event = {
+	id = tyranid.9
+	hide_window = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 		owner = {
-# 			NOT = { has_origin = origin_tyranid_hive }
-# 		}
-# 		has_planet_flag = remove_tyranid_hive
-# 	}
+	trigger = {
+		owner = {
+			NOT = { has_origin = origin_tyranid_hive }
+		}
+		has_planet_flag = remove_tyranid_hive
+	}
 
-# 	immediate = {
-# 		change_pc = pc_wh_infested_hive
+	immediate = {
+		change_pc = pc_wh_infested_hive
 
-# 		reroll_deposits = yes
-# 		reroll_modifier = yes
+		reroll_deposits = yes
+		reroll_modifier = yes
 
-# 		while = {
-# 			limit = {
-# 				has_district = district_generator_uncapped
-# 			}
-# 			remove_district = district_generator_uncapped
-# 		}
+		while = {
+			limit = {
+				has_district = district_generator_uncapped
+			}
+			remove_district = district_generator_uncapped
+		}
 	
-# 		while = {
-# 			limit = {
-# 				has_district = district_mining_uncapped
-# 			}
-# 			remove_district = district_mining_uncapped
-# 		}
+		while = {
+			limit = {
+				has_district = district_mining_uncapped
+			}
+			remove_district = district_mining_uncapped
+		}
 	
-# 		while = {
-# 			limit = {
-# 				has_district = district_farming_uncapped
-# 			}
-# 			remove_district = district_farming_uncapped
-# 		}
+		while = {
+			limit = {
+				has_district = district_farming_uncapped
+			}
+			remove_district = district_farming_uncapped
+		}
 
 
-# 	}
-# }
+	}
+}
