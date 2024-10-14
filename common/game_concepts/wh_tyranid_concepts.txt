@@ -1,0 +1,48 @@
+# For origin
+
+concept_pc_hive_world = {
+	icon = "gfx/interface/icons/concepts/planet_classes/pc_hive.dds"
+}
+
+# TODO: add icons to hive preference and tyranid traits
+concept_tyranid_hive_preference = {
+
+}
+
+concept_trait_wh_tyranid = {
+	
+}
+
+concept_transformation = {
+	
+}
+
+## For Tyranid hive world
+
+concept_pc_wh_tyranid_hive = {
+	icon = "gfx/interface/icons/concepts/planet_classes/pc_hive.dds"
+}
+
+## For transformation progression of tyranid hives
+
+## TODO: add icons for the transformation process of tyranid planets
+
+concept_hive_stage_1 = {
+
+}
+
+concept_hive_stage_2 = {
+	
+}
+
+concept_hive_stage_3 = {
+	
+}
+
+concept_hive_stage_4 = {
+	
+}
+
+concept_hive_stage_5 = {
+	
+}
