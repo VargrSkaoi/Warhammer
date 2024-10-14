@@ -1,5 +1,6 @@
-### Warhammer Planets
+# Warhammer Planets
 
+## The final stage in the investation process is equal to a hive planet
 pc_wh_tyranid_hive = {
 	entity = "infested_planet"
 	picture = pc_infested
@@ -42,6 +43,7 @@ pc_wh_tyranid_hive = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
+## The forth stage of the hive transformation process is about 3/4ths as powerful as a hive planet
 pc_wh_infested_hive = {
 	entity = "infested_planet"
 	picture = pc_infested
@@ -83,6 +85,7 @@ pc_wh_infested_hive = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
+## The third stage of the hive transformation process is about 2/4ths as powerful as a hive planet
 pc_wh_infected_hive = {
 	entity = "infested_planet"
 	picture = pc_infested
@@ -124,6 +127,7 @@ pc_wh_infected_hive = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
+## The second stage of the hive transformation process is about 1/4th as powerful as a hive planet
 pc_wh_incubating_hive = {
 	entity = "infested_planet"
 	picture = pc_infested

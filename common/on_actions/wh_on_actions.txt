@@ -1,15 +1,18 @@
+# builds the tyranid origin home planet at empire planet creation
 empire_init_capital_planet = {
 	events = {
 		tyranid.0
 	}
 }
 
+# when the tyranids finish colonizing a planet starts the event where the planet is teraformed into a new hive
 on_colonized = {
 	events = {
 		tyranid.1
 	}
 }
 
+# when a planet is taken from or by the tyranids calls events to destroy or restart the hive transformation process
 on_planet_transfer = {
 	events = {
 		tyranid.6

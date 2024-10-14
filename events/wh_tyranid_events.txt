@@ -437,48 +437,49 @@ planet_event = {
 	}
 }
 
-planet_event = {
-	id = tyranid.8
-	hide_window = yes
-	is_triggered_only = yes
+# planet_event = {
+# 	id = tyranid.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		has_planet_flag = remove_tyranid_hive
-	}
+# 	trigger = {
+# 		has_planet_flag = remove_tyranid_hive
+# 	}
 
-	immediate = {
-		# Dry Worlds
-		IF = { limit = { has_planet_flag = tyranid_hive_arid } change_pc = pc_arid }
-		IF = { limit = { has_planet_flag = tyranid_hive_desert } change_pc = pc_desert } 
-		IF = { limit = { has_planet_flag = tyranid_hive_savannah } change_pc = pc_savannah }
+# 	immediate = {
+# 		# Dry Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_arid } change_pc = pc_arid }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_desert } change_pc = pc_desert } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_savannah } change_pc = pc_savannah }
 		
-		# Frozen Worlds
-		IF = { limit = { has_planet_flag = tyranid_hive_alpine } change_pc = pc_alpine }
-		IF = { limit = { has_planet_flag = tyranid_hive_arctic } change_pc = pc_arctic } 
-		IF = { limit = { has_planet_flag = tyranid_hive_tundra } change_pc = pc_tundra }
+# 		# Frozen Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_alpine } change_pc = pc_alpine }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_arctic } change_pc = pc_arctic } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_tundra } change_pc = pc_tundra }
 		
-		# Wet Worlds
-		IF = { limit = { has_planet_flag = tyranid_hive_continental } change_pc = pc_continental }
-		IF = { limit = { has_planet_flag = tyranid_hive_ocean } change_pc = pc_ocean } 
-		IF = { limit = { has_planet_flag = tyranid_hive_tropical } change_pc = pc_tropical }
+# 		# Wet Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_continental } change_pc = pc_continental }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_ocean } change_pc = pc_ocean } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_tropical } change_pc = pc_tropical }
 
-		# Special Planets
-		IF = { limit = { has_planet_flag = tyranid_hive_nuked } change_pc = pc_nuked }
-		IF = { limit = { has_planet_flag = tyranid_hive_gaia } change_pc = pc_gaia }
+# 		# Special Planets
+# 		IF = { limit = { has_planet_flag = tyranid_hive_nuked } change_pc = pc_nuked }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_gaia } change_pc = pc_gaia }
 		
-		reroll_planet = yes
-		clear_blockers = yes
+# 		reroll_planet = yes
+# 		clear_blockers = yes
 
-		IF = {
-			limit = { has_planet_flag = planet_earth }
-			set_planet_entity = { entity = continental_planet_earth_entity }
-		}
+# 		IF = {
+# 			limit = { has_planet_flag = planet_earth }
+# 			set_planet_entity = { entity = continental_planet_earth_entity }
+# 		}
 
-		remove_planet_flag = remove_tyranid_hive
-		remove_planet_flag = restart_tyranid_hive
-	}
-}
+# 		remove_planet_flag = remove_tyranid_hive
+# 		remove_planet_flag = restart_tyranid_hive
+# 	}
+# }
 
+# TODO: finish reverse planet transformation
 planet_event = {
 	id = tyranid.8
 	hide_window = yes

@@ -1,3 +1,4 @@
+# checks to see if the planet has a tyranid hive flag
 has_tyranid_hive_flag = {
 	OR = {
 		has_planet_flag = tyranid_hive
@@ -8,6 +9,7 @@ has_tyranid_hive_flag = {
 	}
 }
 
+# checks to see if the planet is a type of hive planet
 is_tyranid_hive = {
 	OR = {
 		is_planet_class = pc_hive

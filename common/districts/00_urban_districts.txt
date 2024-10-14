@@ -742,6 +742,7 @@ district_hive = {
 		potential = {
 			OR = {
 				is_planet_class = pc_hive
+				# Added tyranid hive list of possible triggers
 				is_planet_class = pc_wh_tyranid_hive
 			}
 		}

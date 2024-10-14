@@ -1,3 +1,4 @@
+# SCript to generate and set up the tyranid home planet
 generate_tyranid_home_world = {
 	clear_blockers = yes
 	clear_deposits = yes
