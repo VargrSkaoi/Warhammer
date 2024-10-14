@@ -1,0 +1,573 @@
+namespace = tyranid
+
+@infestingTime = 2880
+@infectingTime = 1440
+@incubationTime = 720
+@embryoTime = 360
+
+planet_event = {
+	id = tyranid.0
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+	}
+
+	immediate = {
+		generate_tyranid_home_world = yes
+	}
+}
+
+planet_event = {
+	id = tyranid.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			owner = {
+				has_origin = origin_tyranid_hive
+			}
+			NOT = {
+				OR = {
+					has_tyranid_hive_flag = yes
+					is_artificial = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		IF = {
+			limit = {
+				NOT = {
+					has_tyranid_hive_flag = yes
+				}
+			}
+
+			set_planet_flag = tyranid_embryo
+
+			add_modifier = {
+				modifier = tyranid_embryo
+				days = @embryoTime
+			}
+
+			planet_event = {
+				id = tyranid.2
+				days = @embryoTime
+			}
+		}
+
+		ELSE_IF = {
+			limit = {
+				is_planet_class = pc_wh_incubating_hive
+			}
+
+			set_planet_flag = tyranid_incubation
+			remove_planet_flag = tyranid_embryo
+			remove_planet_flag = remove_tyranid_hive
+			remove_planet_flag = restart_tyranid_hive
+
+			remove_modifier = remove_tyranid_hive
+			remove_modifier = land_appropriation
+			add_modifier = {
+				modifier = tyranid_incubation
+				days = @incubationTime
+			}
+
+			planet_event = {
+				id = tyranid.3
+				days = @incubationTime
+			}
+		}
+
+		ELSE_IF = {
+			limit = {
+				is_planet_class = pc_wh_infected_hive
+			}
+
+			set_planet_flag = tyranid_infected
+			remove_planet_flag = tyranid_incubation
+			remove_planet_flag = remove_tyranid_hive
+			remove_planet_flag = restart_tyranid_hive
+
+			remove_modifier = remove_tyranid_hive
+			remove_modifier = land_appropriation
+			add_modifier = {
+				modifier = tyranid_infected
+				days = @infectingTime
+			}
+
+			planet_event = {
+				id = tyranid.4
+				days = @infectingTime
+			}
+		}
+
+		ELSE_IF = {
+			limit = {
+				is_planet_class = pc_wh_infested_hive
+			}
+
+			set_planet_flag = tyranid_infested
+			remove_planet_flag = tyranid_infected
+			remove_planet_flag = remove_tyranid_hive
+			remove_planet_flag = restart_tyranid_hive
+
+			remove_modifier = remove_tyranid_hive
+			remove_modifier = land_appropriation
+			add_modifier = {
+				modifier = tyranid_infested
+				days = @infestingTime
+			}
+
+			planet_event = {
+				id = tyranid.5
+				days = @infestingTime
+			}
+		}
+
+		ELSE_IF = {
+			limit = {
+				is_planet_class = pc_wh_tyranid_hive
+			}
+
+			set_planet_flag = tyranid_hive
+			remove_planet_flag = tyranid_infested
+			remove_planet_flag = remove_tyranid_hive
+			remove_planet_flag = restart_tyranid_hive
+
+			remove_modifier = remove_tyranid_hive
+			remove_modifier = land_appropriation
+			add_modifier = {
+				modifier = tyranid_hive
+				days = -1
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+		has_planet_flag = tyranid_embryo
+	}
+
+	immediate = {
+		# Remebers precious world before conversion
+
+		# Dry Worlds
+		IF = { limit = { is_planet_class = pc_arid } set_planet_flag = tyranid_hive_arid }
+		IF = { limit = { is_planet_class = pc_desert } set_planet_flag = tyranid_hive_desert }
+		IF = { limit = { is_planet_class = pc_savannah } set_planet_flag = tyranid_hive_savannah }
+		
+		# Frozen Worlds
+		IF = { limit = { is_planet_class = pc_alpine } set_planet_flag = tyranid_hive_alpine }
+		IF = { limit = { is_planet_class = pc_arctic } set_planet_flag = tyranid_hive_arctic }
+		IF = { limit = { is_planet_class = pc_tundra } set_planet_flag = tyranid_hive_tundra }
+		
+		# Wet Worlds
+		IF = { limit = { is_planet_class = pc_continental } set_planet_flag = tyranid_hive_continental }
+		IF = { limit = { is_planet_class = pc_ocean } set_planet_flag = tyranid_hive_ocean }
+		IF = { limit = { is_planet_class = pc_tropical } set_planet_flag = tyranid_hive_tropical }
+
+		# Special Planets
+		IF = { limit = { is_planet_class = pc_nuked} set_planet_flag = tyranid_hive_nuked }
+		IF = { limit = { is_planet_class = pc_gaia} set_planet_flag = tyranid_hive_gaia }
+
+		remove_modifier = "natural_beauty"
+		remove_modifier = "atmospheric_aphrodisiac"
+		remove_modifier = "atmospheric_hallucinogen"
+		remove_modifier = "lush_planet"
+		remove_modifier = "bleak_planet"
+		remove_modifier = "dangerous_wildlife"
+		remove_modifier = "hazardous_weather"
+		remove_modifier = "wild_storms"
+		remove_modifier = "irradiated_planet"
+		remove_modifier = "second_home"
+		remove_modifier = "terraforming_candidate"
+		remove_modifier = "frozen_terraforming_candidate"
+		remove_modifier = "toxic_terraforming_candidate"
+
+		change_pc = pc_wh_incubating_hive
+
+		set_planet_flag = tyranid_incubation
+		remove_planet_flag = tyranid_embryo
+
+		add_modifier = {
+			modifier = tyranid_incubation
+			days = @incubationTime
+		}
+
+		planet_event = {
+			id = tyranid.3
+			days = @incubationTime
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+		has_planet_flag = tyranid_incubation
+	}
+
+	immediate = {
+		change_pc = pc_wh_infected_hive
+
+		set_planet_flag = tyranid_infected
+		remove_planet_flag = tyranid_incubation
+
+		add_modifier = {
+			modifier = tyranid_infected
+			days = @infectingTime
+		}
+
+		planet_event = {
+			id = tyranid.4
+			days = @infectingTime
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+		has_planet_flag = tyranid_infected
+	}
+
+	immediate = {
+		change_pc = pc_wh_infested_hive
+
+		every_deposit = {
+			limit = {
+				NOT = {
+					OR = {
+						is_deposit_type = d_dust_caverns
+						is_deposit_type = d_dust_desert
+						is_deposit_type = d_bubbling_swamp
+						is_deposit_type = d_fuming_bog
+						is_deposit_type = d_crystalline_caverns
+						is_deposit_type = d_crystal_forest
+						is_deposit_type = d_crystal_reef
+						is_deposit_type = d_betharian_deposit
+						is_deposit_type = d_progenitor
+					}
+				}
+			}
+			remove_deposit = yes
+		}
+
+		set_planet_flag = tyranid_infested
+		remove_planet_flag = tyranid_infected
+
+		add_modifier = {
+			modifier = tyranid_infested
+			days = @infestingTime
+		}
+
+		planet_event = {
+			id = tyranid.5
+			days = @infestingTime
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+		has_planet_flag = tyranid_infested
+	}
+
+	immediate = {
+		change_pc = pc_wh_tyranid_hive
+
+		set_planet_flag = tyranid_hive
+		remove_planet_flag = tyranid_infested
+
+		add_modifier = {
+			modifier = tyranid_hive
+			days = -1
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_tyranid_hive
+		}
+	}
+
+	immediate = {
+		remove_planet_flag = tyranid_embryo
+		remove_planet_flag = tyranid_incubation
+		remove_planet_flag = tyranid_infected
+		remove_planet_flag = tyranid_infested
+		remove_planet_flag = tyranid_hive
+
+		remove_modifier = tyranid_embryo
+		remove_modifier = tyranid_incubation
+		remove_modifier = tyranid_infected
+		remove_modifier = tyranid_infested
+		remove_modifier = tyranid_hive
+
+		set_planet_flag = restart_tyranid_hive
+	}
+}
+
+planet_event = {
+	id = tyranid.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				FROM = { has_origin = origin_tyranid_hive }
+				is_tyranid_hive = no
+			}
+			AND = {
+				FROM = { NOT = { has_origin = origin_tyranid_hive } }
+				OR = {
+					has_modifier = tyranid_embryo
+					has_modifier = tyranid_incubation
+					has_modifier = tyranid_infected
+					has_modifier = tyranid_infested
+					has_modifier = tyranid_hive
+
+					has_planet_flag = tyranid_embryo
+					has_planet_flag = tyranid_incubation
+					has_planet_flag = tyranid_infected
+					has_planet_flag = tyranid_infested
+					has_planet_flag = tyranid_hive
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				FROM = { has_origin = origin_tyranid_hive }
+				is_colony = yes
+				NOT = {
+					OR = {
+						has_planet_flag = tyranid_embryo
+						has_planet_flag = tyranid_incubation
+						has_planet_flag = tyranid_infected
+						has_planet_flag = tyranid_infested
+						has_planet_flag = tyranid_hive
+					}
+				}
+			}
+
+			planet_event = {
+				id = tyranid.1
+			}
+
+			remove_planet_flag = remove_tyranid_hive
+			remove_modifier = remove_tyranid_hive
+		}
+		if = { 
+			limit = {
+				FROM = { NOT = { has_origin = origin_tyranid_hive } }
+			}
+
+			remove_planet_flag = tyranid_embryo
+			remove_planet_flag = tyranid_incubation
+			remove_planet_flag = tyranid_infected
+			remove_planet_flag = tyranid_infested
+			remove_planet_flag = tyranid_hive
+
+			remove_modifier = tyranid_embryo
+			remove_modifier = tyranid_incubation
+			remove_modifier = tyranid_infected
+			remove_modifier = tyranid_infested
+			remove_modifier = tyranid_hive
+
+			add_modifier = {
+				modifier = remove_tyranid_hive
+				days = @infestingTime
+			}
+
+			planet_event = {
+				id = tyranid.8
+				days = @infestingTime
+			}
+
+			set_planet_flag = remove_tyranid_hive
+		}
+	}
+}
+
+# planet_event = {
+# 	id = tyranid.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		has_planet_flag = remove_tyranid_hive
+# 	}
+
+# 	immediate = {
+# 		# Dry Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_arid } change_pc = pc_arid }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_desert } change_pc = pc_desert } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_savannah } change_pc = pc_savannah }
+		
+# 		# Frozen Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_alpine } change_pc = pc_alpine }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_arctic } change_pc = pc_arctic } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_tundra } change_pc = pc_tundra }
+		
+# 		# Wet Worlds
+# 		IF = { limit = { has_planet_flag = tyranid_hive_continental } change_pc = pc_continental }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_ocean } change_pc = pc_ocean } 
+# 		IF = { limit = { has_planet_flag = tyranid_hive_tropical } change_pc = pc_tropical }
+
+# 		# Special Planets
+# 		IF = { limit = { has_planet_flag = tyranid_hive_nuked } change_pc = pc_nuked }
+# 		IF = { limit = { has_planet_flag = tyranid_hive_gaia } change_pc = pc_gaia }
+		
+# 		reroll_planet = yes
+# 		clear_blockers = yes
+
+# 		IF = {
+# 			limit = { has_planet_flag = planet_earth }
+# 			set_planet_entity = { entity = continental_planet_earth_entity }
+# 		}
+
+# 		remove_planet_flag = remove_tyranid_hive
+# 		remove_planet_flag = restart_tyranid_hive
+# 	}
+# }
+
+# TODO: finish reverse planet transformation
+planet_event = {
+	id = tyranid.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_origin = origin_tyranid_hive }
+		}
+		has_planet_flag = remove_tyranid_hive
+	}
+
+	immediate = {
+		IF = {
+			limit = { is_planet_class = pc_wh_tyranid_hive }
+
+			planet_event = {
+				id = tyranid.9
+				days = @infestingTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infested_hive }
+
+			planet_event = {
+				id = tyranid.10
+				days = @infectingTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_infected_hive }
+
+			planet_event = {
+				id = tyranid.11
+				days = @incubationTime
+			}
+		}
+		ELSE_IF = {
+			limit = { is_planet_class = pc_wh_incubating_hive }
+
+			planet_event = {
+				id = tyranid.12
+				days = @embryoTime
+			}
+			
+		}
+	}
+}
+
+planet_event = {
+	id = tyranid.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_origin = origin_tyranid_hive }
+		}
+		has_planet_flag = remove_tyranid_hive
+	}
+
+	immediate = {
+		change_pc = pc_wh_infested_hive
+
+		reroll_deposits = yes
+		reroll_modifier = yes
+
+		while = {
+			limit = {
+				has_district = district_generator_uncapped
+			}
+			remove_district = district_generator_uncapped
+		}
+	
+		while = {
+			limit = {
+				has_district = district_mining_uncapped
+			}
+			remove_district = district_mining_uncapped
+		}
+	
+		while = {
+			limit = {
+				has_district = district_farming_uncapped
+			}
+			remove_district = district_farming_uncapped
+		}
+
+
+	}
+}

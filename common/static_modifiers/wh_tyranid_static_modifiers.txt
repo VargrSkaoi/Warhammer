@@ -1,0 +1,81 @@
+# static modifiers added to tyranid planets based on their stage of transformation into a completehive
+
+## The home planet modifier increases amount of spawning drones based on pops in addition to other planet modifier effects
+tyranid_hive_home = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+	planet_jobs_produces_mult = 0.5
+	planet_jobs_upkeep_mult = 0.5
+	job_spawning_drone_add = 3
+	job_spawning_drone_per_pop = 0.05
+	pop_growth_speed = 0.5
+	planet_pop_assembly_organic_mult = 0.5
+}
+
+# a fully formed hive modifier
+tyranid_hive = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+	planet_jobs_produces_mult = 0.5
+	planet_jobs_upkeep_mult = 0.5
+
+	pop_growth_speed = 0.5
+	planet_pop_assembly_organic_mult = 0.5
+}
+
+# the forth stage modifier
+tyranid_infested = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_produces_mult = 0.4
+	planet_jobs_upkeep_mult = 0.4
+
+	pop_growth_speed = 0.4
+	planet_pop_assembly_organic_mult = 0.4
+}
+
+# the thrid stage modifier
+tyranid_infected = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_produces_mult = 0.3
+	planet_jobs_upkeep_mult = 0.3
+
+	pop_growth_speed = 0.3
+	planet_pop_assembly_organic_mult = 0.3
+}
+
+# the second stage modifier
+tyranid_incubation = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_produces_mult = 0.2
+	planet_jobs_upkeep_mult = 0.2
+
+	pop_growth_speed = 0.2
+	planet_pop_assembly_organic_mult = 0.2
+}
+
+# the first stage modifier (no planet corresponding to modifier)
+tyranid_embryo = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 1
+
+    planet_jobs_produces_mult = 0.1
+	planet_jobs_upkeep_mult = 0.1
+
+	pop_growth_speed = 0.1
+	planet_pop_assembly_organic_mult = 0.1
+}
+
+# modifier for when the hive is being removed
+remove_tyranid_hive = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 3
+}
+

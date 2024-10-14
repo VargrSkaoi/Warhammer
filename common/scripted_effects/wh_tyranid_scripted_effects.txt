@@ -1,0 +1,113 @@
+# SCript to generate and set up the tyranid home planet
+generate_tyranid_home_world = {
+	clear_blockers = yes
+	clear_deposits = yes
+	
+	while = {
+		limit = {
+			has_district = district_generator
+		}
+		remove_district = district_generator
+		add_district = district_generator_uncapped
+	}
+
+	while = {
+		limit = {
+			has_district = district_mining
+		}
+		remove_district = district_mining
+		add_district = district_mining_uncapped
+	}
+
+	while = {
+		limit = {
+			has_district = district_farming
+		}
+		remove_district = district_farming
+		add_district = district_farming_uncapped
+	}
+
+	set_planet_size = 30
+
+	add_modifier = {
+		modifier = tyranid_hive_home
+	}
+}
+
+# TODO: Finish check_planet_modifiers
+track_planet_modifiers = {
+	IF = {
+		limit = {
+			has_planet_modifier = pm_tidal_locked
+		}
+		set_planet_flag = mod_tidal_locked
+		remove_modifier = "tidal_locked"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_weak_magnetic_field
+		}
+		set_planet_flag = mod_weak_magnetic_field
+		remove_modifier = "weak_magnetic_field"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_dangerous_wildlife
+		}
+		set_planet_flag = mod_dangerous_wildlife
+		remove_modifier = "dangerous_wildlife"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_high_gravity
+		}
+		set_planet_flag = mod_high_gravity
+		remove_modifier = "high_gravity"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+		remove_modifier = "low_gravity"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_wild_storms
+		}
+		set_planet_flag = mod_wild_storms
+		remove_modifier = "wild_storms"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+		remove_modifier = "low_gravity"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+		remove_modifier = "low_gravity"	
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+		remove_modifier = "low_gravity"
+	}
+	ELSE_IF = {
+		limit = {
+			has_planet_modifier = pm_low_gravity
+		}
+		set_planet_flag = mod_low_gravity
+		remove_modifier = "low_gravity"
+	}
+}
+
+track_planet_deposits = {
+
+}
