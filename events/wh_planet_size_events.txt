@@ -1,0 +1,80 @@
+namespace = planet_size
+
+planet_event = {
+	id = planet_size.0
+	hide_window = yes
+
+	trigger = {
+		planet_size < 30
+		has_owner = yes
+		num_pops > 0
+		has_building = building_planet_grower
+		NOT = {
+			has_planet_flag = recently_terraformed
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		switch = {
+			trigger = planet_size
+			1 = { set_timed_planet_flag = { flag = recently_terraformed days = 30 }}
+            2 = { set_timed_planet_flag = { flag = recently_terraformed days = 60 }}
+            3 = { set_timed_planet_flag = { flag = recently_terraformed days = 90 }}
+			4 = { set_timed_planet_flag = { flag = recently_terraformed days = 120 }}
+			5 = { set_timed_planet_flag = { flag = recently_terraformed days = 150 }}
+			6 = { set_timed_planet_flag = { flag = recently_terraformed days = 180 }}
+			7 = { set_timed_planet_flag = { flag = recently_terraformed days = 210 }}
+			8 = { set_timed_planet_flag = { flag = recently_terraformed days = 240 }}
+			9 = { set_timed_planet_flag = { flag = recently_terraformed days = 270 }}
+			10 = { set_timed_planet_flag = { flag = recently_terraformed days = 300 }}
+			11 = { set_timed_planet_flag = { flag = recently_terraformed days = 330 }}
+			12 = { set_timed_planet_flag = { flag = recently_terraformed days = 360 }}
+			13 = { set_timed_planet_flag = { flag = recently_terraformed days = 390 }}
+			14 = { set_timed_planet_flag = { flag = recently_terraformed days = 420 }}
+			15 = { set_timed_planet_flag = { flag = recently_terraformed days = 450 }}
+			16 = { set_timed_planet_flag = { flag = recently_terraformed days = 480 }}
+			17 = { set_timed_planet_flag = { flag = recently_terraformed days = 510 }}
+			18 = { set_timed_planet_flag = { flag = recently_terraformed days = 540 }}
+			19 = { set_timed_planet_flag = { flag = recently_terraformed days = 570 }}
+			20 = { set_timed_planet_flag = { flag = recently_terraformed days = 600 }}
+			21 = { set_timed_planet_flag = { flag = recently_terraformed days = 630 }}
+			22 = { set_timed_planet_flag = { flag = recently_terraformed days = 660 }}
+			23 = { set_timed_planet_flag = { flag = recently_terraformed days = 690 }}
+			24 = { set_timed_planet_flag = { flag = recently_terraformed days = 720 }}
+			25 = { set_timed_planet_flag = { flag = recently_terraformed days = 750 }}
+			26 = { set_timed_planet_flag = { flag = recently_terraformed days = 780 }}
+			27 = { set_timed_planet_flag = { flag = recently_terraformed days = 810 }}
+			28 = { set_timed_planet_flag = { flag = recently_terraformed days = 840 }}
+			29 = { set_timed_planet_flag = { flag = recently_terraformed days = 870 }}
+			30 = { set_timed_planet_flag = { flag = recently_terraformed days = 900 }}
+		}
+		change_planet_size = 1
+	}
+}
+
+planet_event = {
+	id = planet_size.1
+	hide_window = yes
+
+	trigger = {
+		planet_size = 30
+		has_owner = yes
+		num_pops > 0
+		has_building = building_planet_grower
+		NOT = {
+			has_planet_flag = recently_terraformed
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		remove_building = building_planet_grower
+	}
+}

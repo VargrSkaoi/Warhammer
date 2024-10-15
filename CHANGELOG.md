@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Finished hive transformation events
+- planet size building and corresponding eventss
+
+## Changed
+
+- warhammer localization file to tyranid localization file
 
 ## [0.2.0]
 
