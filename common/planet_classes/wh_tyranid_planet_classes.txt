@@ -1,4 +1,4 @@
-# Warhammer Planets
+# Tyranid Planets
 
 ## The final stage in the investation process is equal to a hive planet
 pc_wh_tyranid_hive = {
