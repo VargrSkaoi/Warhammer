@@ -1,0 +1,80 @@
+building_planet_grower = {
+	base_buildtime = 360
+
+	resources = {
+		category = planet_buildings
+
+		cost = {
+			minerals = 300
+			energy = 150
+			influence = 25
+		}
+
+		upkeep = {
+			energy = 0
+			minerals = 0
+		}
+
+		upkeep = {
+			trigger = {
+				planet_size <= 10
+			}
+
+			energy = 10
+			minerals = 20
+		}
+
+		upkeep = {
+			trigger = {
+				planet_size > 10
+				planet_size <= 20
+			}
+
+			energy = 20
+			minerals = 40
+		}
+
+		upkeep = {
+			trigger = {
+				planet_size > 20
+				planet_size <= 25
+			}
+
+			energy = 25
+			minerals = 50
+		}
+
+		upkeep = {
+			trigger = {
+				planet_size > 25
+				planet_size <= 30
+			}
+
+			energy = 30
+			minerals = 60
+		}
+		
+	}
+
+	base_cap_amount = 1
+
+	planet_modifier = {
+		pop_happiness = -0.10
+	}
+
+	prerequisites = {
+		"tech_terrestrial_sculpting"
+	}
+
+	potential = {
+		planet = {
+			NOT = {
+				planet_size > 29
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
